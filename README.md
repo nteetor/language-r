@@ -2,26 +2,32 @@
 
 A language package for [R](http://www.r-project.org).
 
-Forked from lee-dohm/language-r and originally imported
-from [r.tmbundle](https://github.com/textmate/r.tmbundle).
+Forked from [lee-dohm/language-r](https://github.com/lee-dohm/language-r) (now
+unmaintained) which was imported from
+[r.tmbundle](https://github.com/textmate/r.tmbundle).
 
 ## status
 
 The grammar has been updated and will now be maintained. Suggestions are
-welcome. 
+welcome.
 
 ## installation
 
-I do not know if I can replace the language-r package hosted by
-Atom. For now I suggest cloning this repo and installing the package
-from the command line using `apm`. Hopefully I will have a better solution
-for you in the future!
+1. Clone this repository
+1. Make sure you have `apm` command line tools installed, `apm -v`.
+1. Navigate to the newly created folder and install the package using `apm`.
+
+The package may eventaully be published under a different, but similar name.
 
 ## license
 
 [MIT](LICENSE.md)
 
-## other
+## see also
 
-I put together an atom syntax which utilizes the new grammar,
+There is a community maintained fork of the language-r package, found at
+https://github.com/REditorSupport/atom-language-r. I highly suggest looking over
+their work.
+
+After updating the R grammar, I put together an atom syntax built just for it,
 https://atom.io/packages/sissel-syntax.
