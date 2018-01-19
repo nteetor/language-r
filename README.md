@@ -10,6 +10,9 @@ from [r.tmbundle](https://github.com/textmate/r.tmbundle).
 The grammar has been updated and will now be maintained. Suggestions are
 welcome.
 
+The sissel syntax I put together makes use of the new grammar, see
+https://atom.io/packages/sissel-syntax.
+
 ## License
 
 [MIT](LICENSE.md)
