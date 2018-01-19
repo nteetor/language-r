@@ -1,13 +1,16 @@
 {
   "name": "language-r",
-  "version": "0.4.2",
+  "version": "0.4.3",
   "author": "Lee Dohm <lee@lee-dohm.com>",
+  "contributors": [
+    "Nathan Teetor <nathanteetor@gmail.com>"
+  ],
   "description": "A language description and snippets for R",
   "keywords": [
     "grammar",
     "r"
   ],
-  "repository": "https://github.com/lee-dohm/language-r",
+  "repository": "https://github.com/nteetor/language-r",
   "license": "MIT",
   "engines": {
     "atom": ">=0.174.0 <2.0.0"

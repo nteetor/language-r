@@ -18,6 +18,18 @@
     'name': 'comment.line.pragma-mark.r'
   }
   {
+    'begin': '#\'[ ]?(@param)\\s+([[:alpha:].][[:alnum:]._]*)?'
+    'beginCaptures':
+      '0':
+        'name': 'punctuation.definition.comment.roxygen.r'
+      '1':
+        'name': 'keyword.roxygen.r'
+      '2':
+        'name': 'support.identifier.r'
+    'end': '\\n'
+    'name': 'comment.line.number-sign.roxygen.r'
+  }
+  {
     'begin': '#\'[ ]?(@[a-zA-Z0-9]+)'
     'beginCaptures':
       '0':
@@ -48,7 +60,7 @@
     'name': 'storage.type.r'
   }
   {
-    'match': '\\b(function|if|break|next|repeat|else|for|return|switch|while|in|invisible)\\b'
+    'match': '\\b(function|if|break|next|repeat|else|for|return|switch|while|in|stop|tryCatch)\\b'
     'name': 'keyword.control.r'
   }
   {
@@ -59,14 +71,16 @@
     'captures':
       '1':
         'name': 'entity.name.function.r'
-    'match': '([[:alpha:].][[:alnum:]._]*)\\('
+      '2':
+        'name': 'keyword.brace.r'      
+    'match': '([[:alpha:].][[:alnum:]._]*)(\\()'
   }
   {
     'match': '\\b((0(x|X)[0-9a-fA-F]*)|(([0-9]+\\.?[0-9]*)|(\\.[0-9]+))((e|E)(\\+|-)?[0-9]+)?)(i|L|l|UL|ul|u|U|F|f|ll|LL|ull|ULL)?\\b'
     'name': 'constant.numeric.r'
   }
   {
-    'match': '\\b(T|F|TRUE|FALSE|NULL|NA|Inf|NaN)\\b'
+    'match': '\\b(T|F|TRUE|FALSE|NULL|NA|NA_integer_|NA_real_|NA_complex_|NA_character_|Inf|NaN)\\b'
     'name': 'constant.language.r'
   }
   {
@@ -82,6 +96,10 @@
     'name': 'keyword.operator.assignment.r'
   }
   {
+    'match': '(\\[{1,2}|\\]{1,2}|\\$)'
+    'name': 'keyword.operator.extract.r'
+  } 
+  {
     'match': '(==|!=|<>|<|>|<=|>=)'
     'name': 'keyword.operator.comparison.r'
   }
@@ -90,8 +108,20 @@
     'name': 'keyword.operator.logical.r'
   }
   {
-    'match': '(\\.\\.\\.|\\$|@|:|\\~)'
+    'match': '(\\(|\\)|\\{|\\})'
+    'name': 'keyword.brace.r'
+  }
+  {
+    'match': '(@|:|;|\\~|\\,)'
     'name': 'keyword.other.r'
+  }
+  {
+    'match': '(\\.\\.\\.)'
+    'name': 'keyword.dots.r'
+  }
+  {
+    'match': '(\\.\\.\\d+)'
+    'name': 'keyword.matched-arg.r'
   }
   {
     'begin': '"'
@@ -126,6 +156,17 @@
         'name': 'constant.character.escape.r'
       }
     ]
+  }
+  {
+    'begin': '`'
+    'beginCaptures':
+      '0':
+        'name': 'punctuation.identifier.begin.r'
+    'end': '`'
+    'endCaptures':
+      '0':
+        'name': 'punctuation.identifier.end.r'
+    'name': 'identifier.r'
   }
   {
     'captures':
